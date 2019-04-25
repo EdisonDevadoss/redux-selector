@@ -15,4 +15,16 @@ const auth = (state = { user: {} }, action) => {
   }
 };
 
+export const selectUserName = state => {
+  let userTitle;
+  if (state.user.gender === "Male") {
+    userTitle = "Mr.";
+  } else if (state.user.maritalStatus === "Married") {
+    userTitle = "Mrs.";
+  } else {
+    userTitle = "Miss.";
+  }
+  return `${userTitle} ${state.user.firstName} ${state.user.lastName}`;
+};
+
 export default auth;

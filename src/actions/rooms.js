@@ -16,6 +16,9 @@ function roomsSuccess(roomsList) {
 export function fetchRooms() {
   return dispatch => {
     dispatch(fetchingRooms());
-    return api.fetchRooms().then(rooms => dispatch(roomsSuccess(rooms)));
+    return api.fetchRooms().then(rooms => {
+      console.log("rooms", rooms);
+      dispatch(roomsSuccess(rooms));
+    });
   };
 }
