@@ -3,7 +3,7 @@ const login = () =>
     setTimeout(
       () =>
         resolve({
-          fistName: "Edison",
+          firstName: "Edison",
           lastName: "Devadoss",
           gender: "Male",
           maritalStatus: "Unmarried",
